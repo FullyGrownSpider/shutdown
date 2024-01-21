@@ -40,6 +40,7 @@ namespace shutdown
 
         public decimal totalTime;
         Label[] labels;
+        public double timeDif = 0;
         DateTime lastUpdateTime = DateTime.Now;
         int selection;
         bool hasHours;
@@ -175,7 +176,8 @@ namespace shutdown
 
         public void TimerTick()
         {
-            var result = (DateTime.Now - lastUpdateTime).TotalSeconds;
+            timeDif += (DateTime.Now - lastUpdateTime).TotalSeconds;
+            lastUpdateTime = DateTime.Now;
             if (totalTime <= 0)
             {
                 if (selection == 0)
@@ -195,9 +197,9 @@ namespace shutdown
                     FillWithTimer();
                 }
             }
-            if (result >= 1)
+            if (timeDif >= 1.0)
             {
-                lastUpdateTime = DateTime.Now;
+                timeDif -= 1.0;
                 totalTime--;
                 SetTimer();
             }
