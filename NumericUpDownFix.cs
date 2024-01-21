@@ -37,14 +37,6 @@
             father.Controls[0].Text = "";
         }
 
-        //private void Father_ValueChanged(NumericUpDownBase sender, EventArgs e)
-        //{
-        //    if (oldValue == 0 && sender.Value / 10 == 0 && sender.Value > 9)
-        //    {
-        //        Console.WriteLine('x');
-        //    }
-        //}
-
         public override Color BackColor
         {
             get { return base.BackColor; }
