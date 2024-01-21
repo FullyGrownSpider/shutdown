@@ -7,7 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>ic_launcher.png</PackageIcon>
+    <ApplicationIcon>ic_launcher.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ic_launcher.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="resources.Designer.cs">
@@ -29,6 +34,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

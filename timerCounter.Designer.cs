@@ -42,6 +42,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             AutoScaleMode = AutoScaleMode.Font;
             MinimizeBox = false;
+            Load += load;
             SizeGripStyle = SizeGripStyle.Hide;
             AutoScaleMode = AutoScaleMode.Font;
             ShowInTaskbar = false;
